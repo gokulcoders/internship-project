@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL-1 TASK-2</title>
+    <style>
+        body{
+            background-image: url("https://www.professionalbeauty.com.au/wp-content/uploads/2020/10/close-up-top-view-white-calculator-on-yellow-background-with-for-picture-id1159599930.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #colorbutton{
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        h2{
+            margin-left: 600px;
+            margin-top: 50px;
+            
+
+        }
+        #colorbutton{
+             margin-right: 400px;
+             float: right;
+             border-radius: 10px;
+             width: 120;
+        }
+        #content{
+            
+            
+            float: right;
+            margin-right: 450px;
+            
+           
+            
+
+        }
+        
+       
+        #cal{
+            margin-left: 320px;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h2>1.Develop a basic button that changes its color when clicked usingJavaScript.</h2>
+    <h2>2.Develop a basic button that changes its color when clicked using JavaScript.</h2>
+    <button id="colorbutton" onclick="changecolor()">Click "Here for for changes color</button>
+    <br>
+    <h2>3.Build a basic calculator that adds two numbers together and displays theresult using JavaScript.</h2>
+    <div id="content">
+        <a href="calculater.html"><button id="cal">CALCULATOR</button></a>
+        
+    </div>
+    
+    <script>
+        function displayGreeting() {
+            var currentTime = new Date();
+            var currentHour = currentTime.getHours();
+        
+            var greeting;
+        
+            if (currentHour < 12) {
+              greeting = 'Good morning!';
+            } else if (currentHour < 18) {
+              greeting = 'Good afternoon!';
+            } else {
+              greeting = 'Good evening!';
+            }
+        
+            alert(greeting);
+          }
+        
+          
+          displayGreeting();
+
+     
+     function changecolor(){
+        var button = document.getElementById('colorbutton');
+        var rcolor = getdifferentcolor();
+        button.style.backgroundColor=rcolor;
+
+     }
+
+     function getdifferentcolor(){
+        var letters ='0123456789ABCDEF';
+        var color='#';
+        for(var i=0;i<6;i++){
+            color+=letters[Math.floor(Math.random()*16)];
+
+        }
+    
+        return color;
+     }
+     document.getElementById('cal').onclick = function() {
+       
+        window.location.href = 'calculater.html';
+      };
+    
+        
+        
+
+    
+ </script>
+</body>
+</html>

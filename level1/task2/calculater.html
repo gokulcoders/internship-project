@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-image: url("https://img.freepik.com/premium-vector/back-school-doodle-sketch-cartoon-seamless-pattern_221062-914.jpg");
+          color: #000000;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+    
+        .calculator {
+          background-color: #ffffff;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          text-align: center;
+        }
+    
+        input[type="number"],
+        button {
+          padding: 10px;
+          margin: 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+    
+        button {
+          background-color: lawngreen;
+          cursor: pointer;
+        }
+    
+        button:hover {
+          background-color: gold;
+        }
+        .calculator h1{
+            justify-content:center;
+            text-align: center;
+            
+          }
+          p{
+            border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: antiquewhite;
+          }
+      </style>
+      
+
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator that adds two numbers together and displays theresult using JavaScript.</h1>
+        <input type="number" id="n1">
+        <input type="number" id="n2">
+        <button onclick="add()">Add</button>
+        <p>Result: <span id="result"></span></p>
+      </div>
+    
+      <script>
+        alert("ENTER THE TWO NUMBERS:");
+        function add() {
+          var num1 = parseFloat(document.getElementById('n1').value);
+          var num2 = parseFloat(document.getElementById('n2').value);
+          var sum = num1 + num2;
+          document.getElementById('result').textContent = sum;
+        }
+        
+      </script>
+</body>
+</html>
